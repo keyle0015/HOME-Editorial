@@ -1,38 +1,43 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-            <a class="navbar-brand" title="HOME Editorial" href="#">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
-                    aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <img src="/img/icon.svg"  height="20">
-                 <b> HOME</b>
-            </a>
-            <div class="riNav">
-                <form class="d-flex">
-                    <input id="searchBox" class="form-control me-2" type="search" placeholder="Buscar por nombre, autor"
-                        aria-label="Search">
-                    <button id="searchBut" class="btn btn-outline-success" type="submit">Buscar</button>
-                </form>
-                <a class="login" href="">Iniciar Sesión</a>
-            </div>
+        <a class="navbar-brand" title="HOME Editorial">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <img class="navIcon" src="/img/icon.svg" height="20" onclick="changePage('/contents/home.html')">
+            <b onclick="changePage('/contents/home.html')"> HOME</b>
+        </a>
+        <div class="riNav">
+            <form class="d-flex">
+                <input id="searchBox" class="form-control me-2" type="search" placeholder="Buscar por nombre, autor"
+                    aria-label="Search">
+                <button id="searchBut" class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+            <a class="login" href="">Iniciar Sesión</a>
         </div>
+    </div>
     </div>
 </nav>
 
 <div class="collapse" id="navbarToggleExternalContent">
     <p class="menTi">Menu</p>
     <ul class="menLi">
-        <li>
+        <li type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" onclick="changePage('/contents/catalogo.html', '/styles/catalogo.css')">
             <a>Catalogo</a>
         </li>
-        <li>
+        <li type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" onclick="changePage('/contents/pedidos.html', '/styles/pedidos.css')">
             <a>Mis pedidos</a>
         </li>
-        <li>
+        <li type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent" onclick="changePage('/contents/cuenta.html', '/styles/cuenta.css')">
             <a>Mi cuenta</a>
         </li>
-        <li>
+        <li type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent"
+            aria-controls="navbarToggleExternalContent">
             <a>Salir</a>
         </li>
     </ul>

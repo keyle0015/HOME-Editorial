@@ -5,6 +5,15 @@
     --bordercolor: rgb(146, 146, 146);
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+* {
+    scrollbar-width: 0px;
+}
+
+
 main {
     display: flex;
     align-items: center;
@@ -27,6 +36,10 @@ main {
 .navbar {
     position: fixed;
     border-bottom: 2px solid var(--bordercolor);
+}
+
+.navIcon {
+    transform: translateY(-3px);
 }
 
 .riNav {
@@ -91,7 +104,7 @@ main {
 }
 
 .menLi li:hover {
-    background-color: #b6b6b6;
+    background-color: #e7e7e7;
 }
 #searchBox {
     border-radius: var(--br);
@@ -113,9 +126,20 @@ main {
 }
 
 #footer {
+    text-align: center;
     color: var(--w);
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     background-color: var(--bg);
+}
+
+
+/*Catalogo*/
+#cat {
+    border: 1px solid var(--bordercolor);
+}
+
+#cat ul {
+    border-top: 1px solid var(--bordercolor);
 }
