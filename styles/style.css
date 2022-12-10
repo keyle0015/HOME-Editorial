@@ -2,6 +2,7 @@
     --br: 25px;
     --bg: #282828;
     --w: white;
+    --bordercolor: rgb(146, 146, 146);
 }
 
 main {
@@ -24,30 +25,59 @@ main {
 
 .navbar {
     position: fixed;
-    border: 0 5px 0 0 solid rgb(120, 120, 120);
+    border-bottom: 2px solid var(--bordercolor);
 }
 
 .collapse,
 .collapsing,
 .show {
-    height: 100%;
+    height: -webkit-fill-available;
     width: 20%;
-    position: relative;
+    position: absolute;
+    border-color: var(--bordercolor);
+    border-style: solid;
+    border-width: 0px 2px 2px 0px;
 }
 
 .menTi {
     font-weight: bolder;
     text-align: center;
+    background-color: #e6e6e6;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid var(--bordercolor);
 }
 
 .menLi {
     list-style: none;
+    background-color: var(--w);
+    padding-left: 0%;
+    font-weight: bold;
 }
 
 .menLi li {
-    text-decoration: none;
+    display: flex;
+    height: 132px;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
 }
 
+.menLi li a{
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+}
+
+.menLi li:last-child {
+    border-top: 1px solid var(--bordercolor);
+}
+
+.menLi li:hover {
+    background-color: #b6b6b6;
+}
 #searchBox {
     border-radius: var(--br);
     width: 304px;
