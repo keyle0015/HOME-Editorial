@@ -10,10 +10,11 @@ main {
     align-items: center;
     margin: 0px auto;
     width: 90%;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .mainBox {
+    margin-top: 100px;
     width: 80%;
     display: flex;
     justify-content: space-around;
