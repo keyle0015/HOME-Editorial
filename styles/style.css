@@ -1,13 +1,76 @@
+:root {
+    --br: 25px;
+    --bg: #282828;
+    --w: white;
+}
+
 main {
-    width: auto;
+    display: flex;
+    align-items: center;
+    margin: 0px auto;
+    width: 90%;
+    margin: 10px auto
+}
+
+.mainBox {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.boxCont {
+    width: 70%;
 }
 
 .navbar {
     position: fixed;
+    border: 0 5px 0 0 solid rgb(120, 120, 120);
+}
+
+.collapse,
+.collapsing,
+.show {
+    height: 100%;
+    width: 20%;
+    position: relative;
+}
+
+.menTi {
+    font-weight: bolder;
+    text-align: center;
+}
+
+.menLi {
+    list-style: none;
+}
+
+.menLi li {
+    text-decoration: none;
+}
+
+#searchBox {
+    border-radius: var(--br);
+    width: 304px;
+}
+
+#searchBut {
+    border-radius: var(--br);
+    width: 148px;
+}
+
+.roundButton {
+    border-radius: var(--br);
+    border: none;
+    color: var(--w);
+    text-align: center;
+    background-color: var(--bg);
+    width: 148px;
 }
 
 #footer {
+    color: var(--w);
     position: absolute;
     bottom: 0;
     width: 100%;
+    background-color: var(--bg);
 }
