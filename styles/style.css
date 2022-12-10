@@ -29,6 +29,20 @@ main {
     border-bottom: 2px solid var(--bordercolor);
 }
 
+.riNav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.login {
+    text-decoration: none;
+    width: 119px;
+    text-align: end;
+}
+
 .collapse,
 .collapsing,
 .show {
