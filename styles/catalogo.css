@@ -1,0 +1,70 @@
+@import "/styles/style.css";
+
+/*Catalogo*/
+.sideBox {
+    width: 30%;
+}
+
+#cat {
+    border: 1px solid var(--bordercolor);
+}
+
+#cat ul {
+    border-top: 1px solid var(--bordercolor);
+    list-style: none;
+    padding-left: 0px;
+    margin-bottom: 0px;
+}
+
+#cat ul li {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#cat ul li:hover {
+    background-color: var(--listhover);
+}
+
+.catalogo {
+    width: 70%;
+    height: 500px;
+}
+
+#pagser {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    top: 0px;
+}
+
+#libros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.libro {
+    float: left;
+    width: 20%;
+    padding: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2% 10%;
+    text-align: center;
+}
+
+
+
+.libro img {
+    width: 100px;
+}
+
+.libro button {
+    border: none;
+    background-color: darkgreen;
+    color: var(--w);
+    padding: 0px 20px;
+}

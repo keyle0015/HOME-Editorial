@@ -3,6 +3,7 @@
     --bg: #282828;
     --w: white;
     --bordercolor: rgb(146, 146, 146);
+    --listhover: #e7e7e7;
 }
 
 ::-webkit-scrollbar {
@@ -132,14 +133,4 @@ main {
     bottom: 0;
     width: 100%;
     background-color: var(--bg);
-}
-
-
-/*Catalogo*/
-#cat {
-    border: 1px solid var(--bordercolor);
-}
-
-#cat ul {
-    border-top: 1px solid var(--bordercolor);
 }

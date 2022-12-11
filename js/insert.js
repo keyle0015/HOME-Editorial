@@ -1,18 +1,12 @@
-changePage("/contents/home.html");
+insertShared();
 
-function changePage(page, style) {
+function insertShared() {
     $(function () {
-        $("#mainCont").load(page);
+        $("#headerArea").load("/shared/nav.html");
+        $("#footer").load("/shared/footer.html");
+        $.get('/shared/head.html', function (response) {
+            $('head').append(response);
+        });
     });
-    
-    var head = document.head;
-    var link = document.createElement("link");
-    
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = style;
-    
-    head.appendChild(link);
-    
     console.log("BOO")
 }
