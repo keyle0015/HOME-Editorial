@@ -4,6 +4,7 @@
     --w: white;
     --bordercolor: rgb(146, 146, 146);
     --listhover: #e7e7e7;
+    --listhead: #e6e6e6;
 }
 
 ::-webkit-scrollbar {
@@ -71,7 +72,7 @@ main {
 .menTi {
     font-weight: bolder;
     text-align: center;
-    background-color: #e6e6e6;
+    background-color: var(--listhead);
     padding: 20px;
     margin-bottom: 0px;
     border-bottom: 1px solid var(--bordercolor);
