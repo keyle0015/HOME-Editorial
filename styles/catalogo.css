@@ -43,12 +43,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     overflow-y: scroll;
 }
 
 .libro {
     float: left;
-    width: 29.95%;
+    width: auto;
+    max-width: 29.95%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -73,4 +75,16 @@
 
 .cover {
     height: 153px;
+}
+
+@media only screen and (max-width: 800px) {
+    .libro {
+        max-width: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .libro {
+        max-width: 100%;
+    }
 }
