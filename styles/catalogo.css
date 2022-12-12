@@ -63,7 +63,9 @@
 
 
 .libro img {
-    width: 100px;
+    width: auto;
+    max-width: 200px;
+    margin: 5px;
 }
 
 .libro button {
@@ -74,7 +76,7 @@
 }
 
 .cover {
-    height: 153px;
+    height: 308px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -86,5 +88,9 @@
 @media only screen and (max-width: 600px) {
     .libro {
         max-width: 100%;
+    }
+
+    #libros {
+        justify-content: center;
     }
 }
