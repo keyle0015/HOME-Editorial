@@ -70,7 +70,3 @@ select {
 input.cort.form-control {
     width: 22%;
 }
-
-.modal-header {
-    background-color: var(--listhead);
-}

@@ -141,3 +141,38 @@ main {
     height: 50px;
     background-color: transparent;
 }
+
+/*Modal*/
+
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer {
+    border-radius: 0px !important;
+}
+
+.modal-title {
+    margin: auto !important;
+}
+
+.modal-header .btn-close {
+    margin-left: 0px !important;
+}
+
+.modal-content {
+    border: 2px solid var(--bordercolor) !important;
+}
+
+.modal-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 27px;
+}
+
+.staticBackdropLabel {
+    background-color: var(--listhead);
+}
+
+.modal-header {
+    background-color: var(--listhead);
+}

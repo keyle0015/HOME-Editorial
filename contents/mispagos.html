@@ -45,23 +45,26 @@
             <div class="contGran">
                 <div class="envioNav">
                     <ul>
-                        <li class="navCont active" onclick="abrirContNav(event, 'direccion')">
+                        <li id="dir" class="navCont active" onclick="abrirContNav(event, 'direccion')">
                             <p>Direccion de envio</p>
                         </li>
-                        <li class="navCont" onclick="abrirContNav(event, 'pago')">
+                        <li id="pag" class="navCont" onclick="abrirContNav(event, 'pago')">
                             <p>Forma de pago</p>
                         </li>
-                        <li class="navCont">
+                        <li id="con" class="navCont">
                             <p>Confirmacion</p>
                         </li>
                     </ul>
                 </div>
+
+                <!--DIRECCION-->
+
                 <div class="opEnvio" id="direccion" style="display: block;">
                     <div class="opText">
                         <div class="contenido">
                             <b>Dirección</b>
                         </div>
-                        <div class="contenido">
+                        <div id="dirSelecc" class="contenido">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia, voluptatem accusamus
                                 corrupti tenetur reiciendis ab doloribus rem eum. Nemo obcaecati veritatis neque,
                                 aliquid pariatur necessitatibus aspernatur possimus eum nostrum hic.</p>
@@ -73,7 +76,7 @@
                         </div>
                     </div>
                     <div class="opText">
-                        <div class="contenido">
+                        <div id="insEntrega" class="contenido">
                             <b>Instrucciones de entrega</b>
                             <p>Ejemplo Ejemplo</p>
                         </div>
@@ -83,7 +86,7 @@
                     </div>
                     <div class="opText">
                         <div class="contenido">
-                            <select>
+                            <select id="opEntrega">
                                 <option selected value="">Normal / Express / Gratis</option>
                                 <option value="normal">Normal</option>
                                 <option value="express">Express</option>
@@ -91,10 +94,13 @@
                             </select>
                         </div>
                         <div class="contenido">
-                            <button>Aceptar</button>
+                            <button onclick="confirmarDat(event, 'dir', 'pag', 'pago')" id="aceptDir">Aceptar</button>
                         </div>
                     </div>
                 </div>
+
+                <!--OPCIONES DE DIRECCION-->
+
                 <div class="opEnvio" id="opDireccion">
                     <div class="opText">
                         <div class="contenido">
@@ -127,6 +133,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!--PAGO-->
+
                 <div class="opEnvio" id="pago">
                     <div class="opText">
                         <div class="contenido">
@@ -134,16 +143,16 @@
                                 <div class="contenido">
                                     <b>Nombre en Tarjeta</b>
                                 </div>
-                                <div class="contenido">
-                                    <p id="nomTar">John Doe</p>
+                                <div  id="nomTar" class="contenido">
+                                    <p>John Doe</p>
                                 </div>
                             </div>
                             <div class="opText">
                                 <div class="contenido">
                                     <b>Numero de Tarjeta</b>
                                 </div>
-                                <div class="contenido">
-                                    <p id="numTar">XXXX XXXX XXXX 4859</p>
+                                <div  id="numTar" class="contenido">
+                                    <p>XXXX XXXX XXXX 4859</p>
                                 </div>
                             </div>
                             <div class="opText">
@@ -171,10 +180,13 @@
                         <div class="contenido">
                         </div>
                         <div class="contenido">
-                            <button>Aceptar</button>
+                            <button onclick="confirmarDat(event, 'pag', 'con', 'confirmacion')" id="aceptPago">Aceptar</button>
                         </div>
                     </div>
                 </div>
+
+                <!--OPCIONES DE PAGO-->
+
                 <div class="opEnvio" id="opPago">
                     <div class="opText">
                         <div class="contenido">
@@ -193,7 +205,8 @@
                     </div>
                     <div class="opText">
                         <p> <img src="https://cdn-icons-png.flaticon.com/512/32/32563.png" alt="" height="10px"> <a
-                                href="" data-bs-toggle="modal" data-bs-target="#nueMetPag">Agregar nuevo metodo de pago</a> </p>
+                                href="" data-bs-toggle="modal" data-bs-target="#nueMetPag">Agregar nuevo metodo de
+                                pago</a> </p>
                     </div>
                     <div class="opText">
                         <div class="contenido"></div>
@@ -205,9 +218,63 @@
 
                 </div>
 
+                <!--CONFIRMAR-->
+
+                <div class="opEnvio" id="confirmacion">
+                    <div class="opText">
+                        <div class="contenido">
+                            <b>Dirección</b>
+                        </div>
+                        <div id="dirFin" class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="opText">
+                        <div id="insEntregaFin" class="contenido">
+                          
+                        </div>
+                    </div>
+                    <div class="opText">
+                        <div class="contenido">
+                            <b>Tipo de entrega</b>
+                        </div>
+                        <div id="opEnFin" class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="opText">
+                        <div class="contenido">
+                            <b>Nombre en Tarjeta</b>
+                        </div>
+                        <div id="nomTarFin" class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="opText">
+                        <div class="contenido">
+                            <b>Numero de Tarjeta</b>
+                        </div>
+                        <div id="numTarFin" class="contenido">
+
+                        </div>
+                    </div>
+                    <div class="opText">
+                        <div class="contenido">
+                        </div>
+                        <div class="contenido">
+                            <button>Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
+
+
+
         </main>
+
+        <!--NUEVA DIRECCION-->
 
         <div class="modal fade" id="nueDireccion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -247,6 +314,8 @@
                 </div>
             </div>
         </div>
+
+        <!--NUEVO PAGO-->
 
         <div class="modal fade" id="nueMetPag" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
